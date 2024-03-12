@@ -10,5 +10,5 @@ public class FakeStoreCartDto {
     private Long id;
     private Long UserId;
     private String date;
-    private Product product;
+    private Product[] product;
 }

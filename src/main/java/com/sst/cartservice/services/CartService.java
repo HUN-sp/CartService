@@ -17,9 +17,14 @@ public class CartService {
         return response;
     }
 
-    public FakeStoreCartDto getSingleCart(Long id){
+    public Cart getSingleCart(Long id){
         FakeStoreCartDto res= restTemplate.getForObject(url + "/carts/" + id, FakeStoreCartDto.class);
-        return res;
+            Cart c=new Cart();
+            c.setId(res.getId());
+            c.setUserId(res.getUserId());
+            c.setDate(res.getDate());
+            c.setProduct(res.getProduct());
+            return c;
     }
 
     public String getUser(Long UserId){

@@ -21,7 +21,7 @@ public class CartController {
     }
 
     @GetMapping("/carts/{id}")
-    public FakeStoreCartDto getSingleCart(@PathVariable("id") Long id){
+    public Cart getSingleCart(@PathVariable("id") Long id){
 
         return cs.getSingleCart(id);
     }
